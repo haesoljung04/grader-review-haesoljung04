@@ -19,10 +19,12 @@ public class TestListExamples {
     assertEquals(expected, merged);
   }
   
-  @Test(timeout = 500)
-  public void testFilter() {
-  List<String> filteredList = Arrays.asList("1","a","b");
-  List<String> result = Arrays.asList("a","b");
-  assertFalse(filteredList == result);
+  @Test
+  public void testFilter1() {
+    List<String> testerInput = Arrays.asList("abc", "def", "ghi", "jkl");
+    List<String> expectedOutput = Arrays.asList();
+    IsMoon stringChecker = new IsMoon();
+    List<String> actualOutput = ListExamples.filter(testerInput, stringChecker);
+    assertEquals(expectedOutput, actualOutput);
   }
 }
