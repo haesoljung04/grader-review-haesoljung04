@@ -17,6 +17,7 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java 2>javac-errors
 if [[ $? -ne 0 ]]
 then
     echo "Compilation failed"
+    cat javac-errors.txt
     exit 1
 fi
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples >testResults.txt
