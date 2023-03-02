@@ -18,4 +18,11 @@ public class TestListExamples {
     List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
     assertEquals(expected, merged);
   }
+  
+  @Test(timeout = 500)
+  public void testFilter() {
+  List<String> filteredList = Arrays.asList("1","a","b");
+  List<String> result = Arrays.asList("a","b");
+  assertFalse(filteredList == result);
+  }
 }
